@@ -5,7 +5,7 @@ There are different ways to change the color of text inside a TextView and I wan
 In general, we can add styling to strings with HTML markup. I will use the &lt;font> tag to display the word 'Colors' in a TextView. Steps are simple:
 1. Store your styled text resource as an HTML-escaped string. Add a new string resource with text 'Colors', surround each character with the &lt;font> tag including color and then replace the angle bracket at start of each &lt;font> tag with &lt;
 ```
-<string name="colored_message">&lt;font color="#0057e7">C&lt;/font>&lt;font color="#d62d20">o&lt;/font>&lt;font color="#ffa700">l&lt;/font>&lt;font color="#0057e7">o&lt;/font>&lt;font color="#008744">r&lt;/font>&lt;font color="#d62d20">s&lt;/font>&lt;/string>
+<string name="colored_message"><font color="#0057e7">C</font><font color="#d62d20">o</font><font color="#ffa700">l</font><font color="#0057e7">o</font><font color="#008744">r</font><font color="#d62d20">s</font></string>
 ```
 More information about string-resource formatting and styling can be found at Formatting and Styling.
 2. Get the string from the string-table and convert the HTML text into styled text.
