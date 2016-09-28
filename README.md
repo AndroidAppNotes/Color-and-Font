@@ -1,5 +1,5 @@
 # Color-and-Font
-[logo]: https://github.com/AndroidAppNotes/Color-and-Font/raw/master/screenshot.png "Logo Title Text 2"
+![alt text](screenshot.png "Screenshot")
 ## TextView with Colored Text
 There are different ways to change the color of text inside a TextView and I want to share one way of them with you.
 In general, we can add styling to strings with HTML markup. I will use the &lt;font> tag to display the word 'Colors' in a TextView. Steps are simple:
@@ -17,8 +17,7 @@ CharSequence styledText = Html.fromHtml(text);
 Again, there are different ways to use custom fonts. I will use the Calligraphy library to change the font of my whole app. The library and its documentation can be found at Calligraphy
 Here's a sample usage:
 1. Add an assets folder to your project if it does not have one.
-
-Adding the assets folder from inside the Android Studio.
+![alt text](add-assets-folder.png "Adding the assets folder from inside the Android Studio.")
 And then add a sub-folder to the assets and name it fonts.
 2. Get your font and copy it to the fonts folder. I will use the free font, Back To School. I renamed the file to BackToSchool.ttf
 3. Add the Calligraphy library to the dependencies of your project.
