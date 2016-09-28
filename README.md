@@ -1,5 +1,5 @@
 # Color-and-Font
-[logo]: screenshot.png "Logo Title Text 2"
+[logo]: https://github.com/AndroidAppNotes/Color-and-Font/raw/master/screenshot.png "Logo Title Text 2"
 ## TextView with Colored Text
 There are different ways to change the color of text inside a TextView and I want to share one way of them with you.
 In general, we can add styling to strings with HTML markup. I will use the &lt;font> tag to display the word 'Colors' in a TextView. Steps are simple:
