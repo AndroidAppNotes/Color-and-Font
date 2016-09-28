@@ -2,15 +2,16 @@
 Android app text color with custom font.
 ## TextView with Colored Text
 There are different ways to change the color of text inside a TextView and I want to share one way of them with you.
-In general, we can add styling to strings with HTML markup. I will use the <font> tag to display the word 'Colors' in a TextView. Steps are simple:
-1. Store your styled text resource as an HTML-escaped string. Add a new string resource with text 'Colors', surround each character with the <font> tag including color and then replace the angle bracket at start of each <font> tag with &lt;
-<string name="colored_message">&lt;font color="#0057e7">C&lt;/font>&lt;font color="#d62d20">o&lt;/font>&lt;font color="#ffa700">l&lt;/font>&lt;font color="#0057e7">o&lt;/font>&lt;font color="#008744">r&lt;/font>&lt;font color="#d62d20">s&lt;/font></string>
+In general, we can add styling to strings with HTML markup. I will use the &lt;font> tag to display the word 'Colors' in a TextView. Steps are simple:
+1. Store your styled text resource as an HTML-escaped string. Add a new string resource with text 'Colors', surround each character with the &lt;font> tag including color and then replace the angle bracket at start of each &lt;font> tag with &lt;
+string name="colored_message">&lt;font color="#0057e7">C&lt;/font>&lt;font color="#d62d20">o&lt;/font>&lt;font color="#ffa700">l&lt;/font>&lt;font color="#0057e7">o&lt;/font>&lt;font color="#008744">r&lt;/font>&lt;font color="#d62d20">s&lt;/font>&lt;/string>
 More information about string-resource formatting and styling can be found at Formatting and Styling.
 2. Get the string from the string-table and convert the HTML text into styled text.
-String text = getResources().getString(R.string.colored_message);
+```String text = getResources().getString(R.string.colored_message);
 CharSequence styledText = Html.fromHtml(text);
+```
 3. Change the text of your TextView.
-textView.setText(styledText);
+`textView.setText(styledText);`
 ## App Font
 Again, there are different ways to use custom fonts. I will use the Calligraphy library to change the font of my whole app. The library and its documentation can be found at Calligraphy
 Here's a sample usage:
@@ -33,16 +34,20 @@ And then add a sub-folder to the assets and name it fonts.
                         .build()
         );
     }
-}```
-5. In your manifest, set the name attribute of your <application> to the new application class.
-```<application
+}
+```
+5. In your manifest, set the name attribute of your 
+application> to the new application class.
+```&lt;application
     android:name=".FontColorsApp"
-    ...```
+    ...
+```
 6. Override the attachBaseContext() in your activities.
 ```@Override
 protected void attachBaseContext(Context newBase) {
     super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
-}```
+}
+```
 
 Run your app and it should display your text using the font from the assets.
 
