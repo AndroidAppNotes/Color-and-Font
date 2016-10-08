@@ -9,7 +9,8 @@ In general, we can add styling to strings with HTML markup. I will use the &lt;f
 ```
 More information about string-resource formatting and styling can be found at Formatting and Styling.
 2. Get the string from the string-table and convert the HTML text into styled text.
-```String text = getResources().getString(R.string.colored_message);
+```
+String text = getResources().getString(R.string.colored_message);
 CharSequence styledText = Html.fromHtml(text);
 ```
 3. Change the text of your TextView.
